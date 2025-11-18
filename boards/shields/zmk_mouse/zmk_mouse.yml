@@ -1,0 +1,8 @@
+file_format: "1"
+id: zmk_mouse
+name: zmk_mouse
+type: shield
+url: https://github.com/tennis-n1010/zmk-config-zmk-mouse
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
