@@ -1,13 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-=======
->>>>>>> e88c74e (Updated zmk_mouse.keymap)
-=======
->>>>>>> e88c74e (Updated zmk_mouse.keymap)
 #include <dt-bindings/zmk/pointing.h>
 
 
@@ -23,36 +17,8 @@
 
             tap-ms = <20>;
         };
-
-        select_bt_prv_nxt: select_bt_prv_nxt {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&bt BT_PRV>, <&bt BT_NXT>;
-
-            tap-ms = <20>;
-            label = "SELECT_BT_PRV_NXT";
-        };
     };
 
-<<<<<<< HEAD
-=======
-    combos {
-        compatible = "zmk,combos";
-
-        to_layer2 {
-            bindings = <&to 1>;
-            key-positions = <0 2>;
-            layers = <0>;
-        };
-
-        to_layer0 {
-            bindings = <&to 0>;
-            key-positions = <0 2>;
-            layers = <1>;
-        };
-    };
-
->>>>>>> e88c74e (Updated zmk_mouse.keymap)
     keymap {
         compatible = "zmk,keymap";
 
@@ -65,18 +31,10 @@
         };
         layer_2 {
             bindings = <
-<<<<<<< HEAD
-<<<<<<< HEAD
                 &mkp LCLK    &mkp MCLK    &mkp RCLK
-=======
-&mkp MB4  &trans  &mkp MB5
->>>>>>> e88c74e (Updated zmk_mouse.keymap)
-=======
-&mkp MB4  &trans  &mkp MB5
->>>>>>> e88c74e (Updated zmk_mouse.keymap)
             >;
 
-            sensor-bindings = <&select_bt_prv_nxt>;
+            sensor-bindings = <&scroll_up_down>;
         };
         layer_3 {
             bindings = <
