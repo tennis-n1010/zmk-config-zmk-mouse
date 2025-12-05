@@ -1,0 +1,42 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
+#include "zmk_mouse.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &zmk_physical_layout;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <3>;
+        rows = <1>;               
+        map = <
+            RC(0,0) RC(0,1) RC(0,2)
+        >;
+    };
+
+    zmk_physical_layout: zmk_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+
+        keys  //                 w   h    x    y     rot    rx    ry
+        = <&key_physical_attrs 100 100    0    0       0     0     0>
+        , <&key_physical_attrs 100 100  120    0       0     0     0>
+        , <&key_physical_attrs 100 100  240    0       0     0     0>
+        ;
+    };
+};
+
+&trackball_listener {
+    status = "okay";
+};
