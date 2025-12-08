@@ -18,7 +18,7 @@ if SHIELD_ZMK_MOUSE_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
-    default "Mouse Dongle"
+    default "ZMK Mouse Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
