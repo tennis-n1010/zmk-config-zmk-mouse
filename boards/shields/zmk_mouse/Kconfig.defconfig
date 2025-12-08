@@ -1,4 +1,12 @@
-if SHIELD_ZMK_MOUSE
+if SHIELD_ZMK_MOUSE_STANDALONE
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "ZMK Mouse"
+
+endif
+
+if SHIELD_ZMK_MOUSE_PERIPHERAL
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
@@ -10,7 +18,7 @@ if SHIELD_ZMK_MOUSE_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
-    default "ZMK Mouse"
+    default "ZMK Mouse Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y

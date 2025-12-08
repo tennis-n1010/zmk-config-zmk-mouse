@@ -2,6 +2,9 @@
 #include <physical_layouts.dtsi>
 #include "zmk_mouse.dtsi"
 
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
