@@ -1,6 +1,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include "zmk_mouse.dtsi"
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100

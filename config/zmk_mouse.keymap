@@ -5,6 +5,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 
+&msc {
+    acceleration-exponent = <2>;
+};
 
 / {
 
